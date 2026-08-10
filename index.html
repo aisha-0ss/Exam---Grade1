@@ -299,177 +299,84 @@ window.storage = {
    ============================================================ */
 const PARTS = [
 {
-  id:0, title:"Part 1 — Foundations Check", sub:"24 questions",
+  id:0, title:"Part 1 — Foundations Check", sub:"8 questions",
   questions:[
-    {n:1, prompt:"Name this shape: 3 sides, 3 corners.", type:"short", accept:["triangle"]},
-    {n:2, prompt:"Name this shape: 4 equal sides, 4 corners.", type:"short", accept:["square"]},
-    {n:3, prompt:"Name this shape: 0 sides, perfectly round.", type:"short", accept:["circle"]},
-    {n:4, prompt:"Name this shape: 4 sides, opposite sides equal, but not all 4 equal.", type:"short", accept:["rectangle"]},
-    {n:5, prompt:"Hour hand between 7 and 8, minute hand on 6. What time is it?", type:"short", accept:["7:30"]},
-    {n:6, prompt:"Hour hand on 9, minute hand on 12. What time is it?", type:"short", accept:["9:00"]},
-    {n:7, prompt:"It's 2:00. In half an hour, what time will it be?", type:"short", accept:["2:30"]},
-    {n:8, prompt:"A pizza is cut into 2 equal parts. Each part is called a ___.", type:"short", accept:["half"]},
-    {n:9, prompt:"A pizza is cut into 4 equal parts. Each part is called a ___.", type:"short", accept:["fourth","quarter"]},
-    {n:10, prompt:"8 + 6 =", type:"short", accept:["14"]},
-    {n:11, prompt:"13 − 7 =", type:"short", accept:["6"]},
-    {n:12, prompt:"9 + 5 =", type:"short", accept:["14"]},
-    {n:13, prompt:"15 − 8 =", type:"short", accept:["7"]},
-    {n:14, prompt:"7 + 7 =", type:"short", accept:["14"]},
-    {n:15, prompt:"12 − 6 =", type:"short", accept:["6"]},
-    {n:16, prompt:"In the number 47, how many tens and how many ones? (e.g. \"4, 7\")", type:"short", accept:["4,7"]},
-    {n:17, prompt:"Write the number that has 6 tens and 3 ones.", type:"short", accept:["63"]},
-    {n:18, prompt:"Use >, <, or =:  52 ____ 49", type:"short", accept:[">"]},
-    {n:19, prompt:"Use >, <, or =:  38 ____ 41", type:"short", accept:["<"]},
-    {n:20, prompt:"Order from least to greatest: 74, 47, 17, 71", type:"short", accept:["17,47,71,74"]},
-    {n:21, prompt:"Fill in the missing numbers: 88, 89, ___, ___, 92", type:"short", accept:["90,91"]},
-    {n:22, prompt:"(Data: Dogs = 5, Cats = 3) How many more dogs than cats?", type:"short", accept:["2"]},
-    {n:23, prompt:"(Same data: Dogs = 5, Cats = 3) How many pets in total?", type:"short", accept:["8"]},
-    {n:24, prompt:"True or false: 9 + 4 = 4 + 9", type:"tf", correct:true}
+    {n:1, prompt:"Name this shape: 4 sides, opposite sides equal (not all 4 equal), and 4 right angles.", type:"short", accept:["rectangle"]},
+    {n:2, prompt:"It's 6:45. What time will it be in 30 minutes?", type:"short", accept:["7:15"]},
+    {n:3, prompt:"A cake is cut into 4 equal pieces. Two pieces are eaten. What fraction of the cake is left?", type:"short", accept:["1/2","2/4"]},
+    {n:4, prompt:"8 + 5 + 2 =", type:"short", accept:["15"]},
+    {n:5, prompt:"17 − 9 =", type:"short", accept:["8"]},
+    {n:6, prompt:"In the number 68, what is the actual VALUE of the digit in the tens place (not just \"6\" — the value it represents)?", type:"short", accept:["60"]},
+    {n:7, prompt:"Order from greatest to least: 39, 93, 9, 30", type:"short", accept:["93,39,30,9"]},
+    {n:8, prompt:"A fruit bowl has 6 apples, 4 bananas, and 10 grapes. How many pieces of fruit in total?", type:"short", accept:["20"]}
   ]
 },
 {
-  id:1, title:"Part 2 — Add and Subtract within 20", sub:"10 questions",
+  id:1, title:"Part 2 — Numbers & Place Value", sub:"9 questions",
   questions:[
-    {n:1, prompt:"9 + 8 =", type:"short", accept:["17"]},
-    {n:2, prompt:"16 − 9 =", type:"short", accept:["7"]},
-    {n:3, prompt:"An array has 3 rows with 4 dots in each row. How many dots in total?", type:"short", accept:["12"]},
-    {n:4, prompt:"6 + 6 + 6 =", type:"short", accept:["18"]},
-    {n:5, prompt:"Fill in the missing number: 8 + ___ = 15", type:"short", accept:["7"]},
-    {n:6, prompt:"True or false: 11 − 4 = 4 − 11", type:"tf", correct:false},
-    {n:7, prompt:"14 haircuts are scheduled. The shop already did 6. How many are left?", type:"short", accept:["8"]},
-    {n:8, prompt:"A garden has 4 rows of flowers with 5 flowers in each row. How many flowers in total?", type:"short", accept:["20"]},
-    {n:9, prompt:"Sam has 9 red grapes and 8 green grapes. How many grapes in total?", type:"short", accept:["17"]},
-    {n:10, prompt:"Write the whole fact family for 6, 9, and 15.", type:"manual", expected:"6+9=15, 9+6=15, 15−6=9, 15−9=6"}
+    {n:1, prompt:"An array has 4 rows of 6. How many in total?", type:"short", accept:["24"]},
+    {n:2, prompt:"Write a subtraction fact that undoes 9 + 7 = 16.", type:"short", accept:["16-7=9","16-9=7"]},
+    {n:3, prompt:"A classroom collected cans in three batches: 8, then 9, then 5 more. How many cans total?", type:"short", accept:["22"]},
+    {n:4, prompt:"15 − ___ = 6", type:"short", accept:["9"]},
+    {n:5, prompt:"Write the number that has 3 hundreds, 9 tens, and 4 ones.", type:"short", accept:["394"]},
+    {n:6, prompt:"In the number 706, why does the 0 matter? What does it tell you about the tens place?", type:"manual", expected:"It's a placeholder — it means there are 0 tens (not the same as just \"76\")."},
+    {n:7, prompt:"Use the digits 5, 0, and 8 to write the smallest possible 3-digit number.", type:"short", accept:["508"]},
+    {n:8, prompt:"Is 217 closer to 200 or to 300?", type:"short", accept:["200"]},
+    {n:9, prompt:"Skip count by 100s starting at 250: 250, 350, ___, ___", type:"short", accept:["450,550"]}
   ]
 },
 {
-  id:2, title:"Part 3 — Place Value within 1,000", sub:"13 questions",
+  id:2, title:"Part 3 — Addition & Subtraction", sub:"9 questions",
   questions:[
-    {n:1, prompt:"In the number 452, what digit is in the hundreds place?", type:"short", accept:["4"]},
-    {n:2, prompt:"In the number 452, what digit is in the tens place?", type:"short", accept:["5"]},
-    {n:3, prompt:"In the number 452, what digit is in the ones place?", type:"short", accept:["2"]},
-    {n:4, prompt:"Write the number that has 3 hundreds, 6 tens, and 2 ones.", type:"short", accept:["362"]},
-    {n:5, prompt:"Write 275 in expanded form (hundreds + tens + ones).", type:"manual", expected:"200 + 70 + 5"},
-    {n:6, prompt:"Write 408 in word form.", type:"manual", expected:"four hundred eight"},
-    {n:7, prompt:"Use the digits 7, 2, and 9 to create the largest possible 3-digit number.", type:"short", accept:["972"]},
-    {n:8, prompt:"Use >, <, or =:  342 ____ 324", type:"short", accept:[">"]},
-    {n:9, prompt:"Use >, <, or =:  601 ____ 610", type:"short", accept:["<"]},
-    {n:10, prompt:"Is 46 even or odd?", type:"short", accept:["even"]},
-    {n:11, prompt:"Is 53 even or odd?", type:"short", accept:["odd"]},
-    {n:12, prompt:"Skip count by 5s: 15, 20, ___, ___, 35", type:"short", accept:["25,30"]},
-    {n:13, prompt:"Skip count by 100s: 300, 400, ___, ___, 700", type:"short", accept:["500,600"]}
+    {n:1, prompt:"68 + 47 =", type:"short", accept:["115"]},
+    {n:2, prompt:"100 − 37 =", type:"short", accept:["63"]},
+    {n:3, prompt:"A jar had 84 marbles. 27 were removed, then 15 were added back. How many now?", type:"short", accept:["72"]},
+    {n:4, prompt:"Break apart to add: 56 + 38 = (50+6) + (30+8) =", type:"short", accept:["94"]},
+    {n:5, prompt:"90 − ___ = 54", type:"short", accept:["36"]},
+    {n:6, prompt:"467 + 258 =", type:"short", accept:["725"]},
+    {n:7, prompt:"800 − 346 =", type:"short", accept:["454"]},
+    {n:8, prompt:"Start with 345. Add 100, then subtract 10. What do you end with?", type:"short", accept:["435"]},
+    {n:9, prompt:"A store had 512 items. They received 275 more, then sold 180. How many items now?", type:"short", accept:["607"]}
   ]
 },
 {
-  id:3, title:"Part 4 — Add and Subtract within 100", sub:"12 questions",
+  id:3, title:"Part 4 — Money, Time & Measurement", sub:"9 questions",
   questions:[
-    {n:1, prompt:"47 + 28 =", type:"short", accept:["75"]},
-    {n:2, prompt:"82 − 35 =", type:"short", accept:["47"]},
-    {n:3, prompt:"56 + 37 =", type:"short", accept:["93"]},
-    {n:4, prompt:"91 − 48 =", type:"short", accept:["43"]},
-    {n:5, prompt:"Break apart to add: 38 + 25 = (30+8) + (20+5) =", type:"short", accept:["63"]},
-    {n:6, prompt:"Make a ten first: 27 + 16 =", type:"short", accept:["43"]},
-    {n:7, prompt:"Fill in the missing number: 64 − ___ = 29", type:"short", accept:["35"]},
-    {n:8, prompt:"True or false: 45 + 38 = 38 + 45", type:"tf", correct:true},
-    {n:9, prompt:"A farm has 27 horses. 16 more arrive. How many horses now?", type:"short", accept:["43"]},
-    {n:10, prompt:"Ben had 82 crayons. He gave away 39. How many does he have left?", type:"short", accept:["43"]},
-    {n:11, prompt:"Team A scored 45 points, Team B scored 62. How many more points did Team B score?", type:"short", accept:["17"]},
-    {n:12, prompt:"There were 56 apples. 18 were sold, then 12 more were picked. How many apples are there now?", type:"short", accept:["50"]}
+    {n:1, prompt:"You have 3 quarters, 1 dime, and 2 nickels. How much money in total (in cents)?", type:"short", accept:["95"]},
+    {n:2, prompt:"A sandwich costs 65 cents. You pay with 3 quarters (75 cents). How much change do you get?", type:"short", accept:["10"]},
+    {n:3, prompt:"It's 9:50. What time will it be in 20 minutes?", type:"short", accept:["10:10"]},
+    {n:4, prompt:"Which is worth more: 7 dimes, or 3 quarters and 1 nickel? Answer with the cent amount of the larger one.", type:"short", accept:["80"]},
+    {n:5, prompt:"It's 12:40 now. A movie starts at 1:15. How many minutes until it starts?", type:"short", accept:["35"]},
+    {n:6, prompt:"One hallway is 18 feet long, another is 24 feet long. Combined length?", type:"short", accept:["42"]},
+    {n:7, prompt:"Which is the better estimate for the height of a real door: 7 feet or 7 inches?", type:"short", accept:["feet","7feet"]},
+    {n:8, prompt:"A ribbon is 2 meters long. How many centimeters is that? (1 m = 100 cm)", type:"short", accept:["200"]},
+    {n:9, prompt:"A board is 6 feet long and is cut into 2 equal pieces. How long is each piece?", type:"short", accept:["3"]}
   ]
 },
 {
-  id:4, title:"Part 5 — Add and Subtract within 1,000", sub:"10 questions",
+  id:4, title:"Part 5 — Data & Geometry", sub:"8 questions",
   questions:[
-    {n:1, prompt:"345 + 128 =", type:"short", accept:["473"]},
-    {n:2, prompt:"560 − 230 =", type:"short", accept:["330"]},
-    {n:3, prompt:"456 + 100 =", type:"short", accept:["556"]},
-    {n:4, prompt:"456 + 10 =", type:"short", accept:["466"]},
-    {n:5, prompt:"683 − 100 =", type:"short", accept:["583"]},
-    {n:6, prompt:"683 − 10 =", type:"short", accept:["673"]},
-    {n:7, prompt:"Break apart: 234 + 345 = (200+30+4) + (300+40+5) =", type:"short", accept:["579"]},
-    {n:8, prompt:"12 + 23 + 31 + 14 =", type:"short", accept:["80"]},
-    {n:9, prompt:"One school building has 245 students, another has 318. How many students in total?", type:"short", accept:["563"]},
-    {n:10, prompt:"A store had 900 apples. They sold 275. How many are left?", type:"short", accept:["625"]}
+    {n:1, prompt:"Picture graph: each star = 5 points. A row shows 3 stars. How many points is that?", type:"short", accept:["15"]},
+    {n:2, prompt:"Same graph: another row shows 2 stars (10 points). How many more points does the first row (15) have?", type:"short", accept:["5"]},
+    {n:3, prompt:"Line plot of shoe sizes: size 3 appears once, size 4 appears four times, size 5 appears twice. Which size is most common?", type:"short", accept:["4"]},
+    {n:4, prompt:"Same line plot: how many pairs of shoes are there in total?", type:"short", accept:["7"]},
+    {n:5, prompt:"A shape has 4 equal sides and 4 right angles. Is it definitely a square, or could it be some other shape?", type:"short", accept:["square"]},
+    {n:6, prompt:"How many more sides does a hexagon have than a triangle?", type:"short", accept:["3"]},
+    {n:7, prompt:"A circle is split into 3 equal parts. What is each part called?", type:"short", accept:["third"]},
+    {n:8, prompt:"A rectangle is split into 4 parts, but they aren't all the same size. Can each piece correctly be called \"a fourth\"? Why or why not?", type:"manual", expected:"No — a fourth means one of four EQUAL parts."}
   ]
 },
 {
-  id:5, title:"Part 6 — Money and Time", sub:"10 questions",
+  id:5, title:"Part 6 — Mixed Challenge Round", sub:"7 questions, no section labels", diagnostic:true,
+  note:"Pulled from everything above, in no particular order — just like a real cumulative exam.",
   questions:[
-    {n:1, prompt:"You have 2 quarters, 1 dime, and 3 pennies. How much money in total (in cents)?", type:"short", accept:["63"]},
-    {n:2, prompt:"You have 3 dimes and 4 nickels. How much money in total (in cents)?", type:"short", accept:["50"]},
-    {n:3, prompt:"You have 1 dollar and 2 quarters. How much money in total (in cents)?", type:"short", accept:["150"]},
-    {n:4, prompt:"A toy costs 85 cents. You pay with a dollar (100 cents). How much change do you get?", type:"short", accept:["15"]},
-    {n:5, prompt:"Hour hand between 3 and 4, minute hand on 6. What time is it?", type:"short", accept:["3:30"]},
-    {n:6, prompt:"Hour hand on 11, minute hand on 12. What time is it?", type:"short", accept:["11:00"]},
-    {n:7, prompt:"It's 5:15. Which number is the minute hand pointing to?", type:"short", accept:["3"]},
-    {n:8, prompt:"It's 8:45. What time will it be in 15 minutes?", type:"short", accept:["9:00"]},
-    {n:9, prompt:"True or false: A quarter is worth more than a dime.", type:"tf", correct:true},
-    {n:10, prompt:"Maria has 4 dimes and 2 pennies. She spends 25 cents. How much does she have left (in cents)?", type:"short", accept:["17"]}
-  ]
-},
-{
-  id:6, title:"Part 7 — Measurement", sub:"10 questions",
-  questions:[
-    {n:1, prompt:"Which is more reasonable for the length of a pencil: 7 inches or 7 feet?", type:"short", accept:["inches","7inches"]},
-    {n:2, prompt:"A book's length was measured as 30 units. Is that more likely 30 cm or 30 m?", type:"short", accept:["cm"]},
-    {n:3, prompt:"A ribbon measures 12 inches. How many feet is that? (1 foot = 12 inches)", type:"short", accept:["1"]},
-    {n:4, prompt:"About how many inches long is a new crayon: 3 inches or 30 inches?", type:"short", accept:["3"]},
-    {n:5, prompt:"A rope is 5 meters long. Another is 3 meters. How much longer is the first rope?", type:"short", accept:["2"]},
-    {n:6, prompt:"A caterpillar is 9 cm long. A ladybug is 2 cm long. How much longer is the caterpillar?", type:"short", accept:["7"]},
-    {n:7, prompt:"True or false: A meter is longer than a centimeter.", type:"tf", correct:true},
-    {n:8, prompt:"Two boards are 45 inches and 38 inches. How much longer is the first board?", type:"short", accept:["7"]},
-    {n:9, prompt:"Which is a more reasonable estimate for the length of a car: 12 feet or 12 inches?", type:"short", accept:["feet","12feet"]},
-    {n:10, prompt:"A garden bed is 8 feet long. Another is 5 feet long. What's their combined length?", type:"short", accept:["13"]}
-  ]
-},
-{
-  id:7, title:"Part 8 — Data", sub:"8 questions",
-  questions:[
-    {n:1, prompt:"Picture graph: each apple picture = 2 real apples. Monday shows 3 pictures. How many apples were sold Monday?", type:"short", accept:["6"]},
-    {n:2, prompt:"Same graph: Tuesday shows 5 pictures. How many apples were sold Tuesday?", type:"short", accept:["10"]},
-    {n:3, prompt:"Same graph: Wednesday shows 2 pictures (4 apples). How many more apples on Tuesday than Wednesday?", type:"short", accept:["6"]},
-    {n:4, prompt:"Same graph: total apples sold across all three days (Mon 6, Tue 10, Wed 4)?", type:"short", accept:["20"]},
-    {n:5, prompt:"Line plot of shoe sizes: size 4 appears twice, size 5 appears three times, size 6 appears once. How many kids have shoe size 5?", type:"short", accept:["3"]},
-    {n:6, prompt:"Same line plot: how many kids in total?", type:"short", accept:["6"]},
-    {n:7, prompt:"Same line plot: which shoe size is most common?", type:"short", accept:["5"]},
-    {n:8, prompt:"True or false (same line plot): more kids have size 6 than size 4.", type:"tf", correct:false}
-  ]
-},
-{
-  id:8, title:"Part 9 — Geometry", sub:"8 questions",
-  questions:[
-    {n:1, prompt:"A shape has 4 sides and 4 right angles, but not all sides are equal. What is it?", type:"short", accept:["rectangle"]},
-    {n:2, prompt:"A shape has 3 sides and 3 angles. What is it?", type:"short", accept:["triangle"]},
-    {n:3, prompt:"A shape has 5 sides. What is it called?", type:"short", accept:["pentagon"]},
-    {n:4, prompt:"A shape has 6 sides. What is it called?", type:"short", accept:["hexagon"]},
-    {n:5, prompt:"True or false: All rectangles have 4 right angles.", type:"tf", correct:true},
-    {n:6, prompt:"A rectangle is divided into 3 equal parts. What is each part called?", type:"short", accept:["third","athird"]},
-    {n:7, prompt:"A circle is divided into 4 equal parts. What is each part called?", type:"short", accept:["fourth","quarter"]},
-    {n:8, prompt:"A shape is cut into 2 parts, but the parts are different sizes. Are they halves? Why or why not?", type:"manual", expected:"No — halves must be equal parts."}
-  ]
-},
-{
-  id:9, title:"Part 10 — Mixed Challenge Round", sub:"18 questions, no unit labels", diagnostic:true,
-  note:"Pulled from everything above, in no particular order, just like a real cumulative exam would be.",
-  questions:[
-    {n:1, prompt:"234 + 458 =", type:"short", accept:["692"]},
-    {n:2, prompt:"Which is greater: 4 hundreds 2 tens, or 419? (answer with the number)", type:"short", accept:["420"]},
-    {n:3, prompt:"You have 3 quarters and 2 dimes. How much money (in cents)?", type:"short", accept:["95"]},
-    {n:4, prompt:"Hour hand between 6 and 7, minute hand on 6. What time is it?", type:"short", accept:["6:30"]},
-    {n:5, prompt:"True or false: 9 tens = 90", type:"tf", correct:true},
-    {n:6, prompt:"A garden is 24 feet long and 15 feet wide. How much longer is the length than the width?", type:"short", accept:["9"]},
-    {n:7, prompt:"Skip count by 10s: 340, 350, ___, ___, 380", type:"short", accept:["360,370"]},
-    {n:8, prompt:"A rectangle is split into 4 equal parts, 3 are shaded. What fraction is shaded?", type:"short", accept:["3/4"]},
-    {n:9, prompt:"500 − 125 =", type:"short", accept:["375"]},
-    {n:10, prompt:"Picture graph: each book icon = 3 books. A class's row shows 4 icons. How many books?", type:"short", accept:["12"]},
-    {n:11, prompt:"Ana has 145 stickers. She gives away 68. How many does she have left?", type:"short", accept:["77"]},
-    {n:12, prompt:"Is 128 even or odd?", type:"short", accept:["even"]},
-    {n:13, prompt:"Write the whole fact family for 8, 7, and 15.", type:"manual", expected:"8+7=15, 7+8=15, 15−8=7, 15−7=8"},
-    {n:14, prompt:"A rectangle has 4 sides, a triangle has 3. How many fewer sides does the triangle have?", type:"short", accept:["1"]},
-    {n:15, prompt:"60 minutes make 1 ___.", type:"short", accept:["hour"]},
-    {n:16, prompt:"Which is longer: 1 meter or 90 centimeters?", type:"short", accept:["1meter","meter"]},
-    {n:17, prompt:"An array has 3 rows of 6. What's the total?", type:"short", accept:["18"]},
-    {n:18, prompt:"A pizza is cut into 2 unequal parts. Can each part correctly be called \"a half\"? Why or why not?", type:"manual", expected:"No — halves must be equal parts."}
+    {n:1, prompt:"A ranch has 245 sheep and 178 cows. How many animals in total?", type:"short", accept:["423"]},
+    {n:2, prompt:"Fill in the missing part: 300 + ___ + 6 = 386", type:"short", accept:["80"]},
+    {n:3, prompt:"It's 11:40. What time will it be in 50 minutes?", type:"short", accept:["12:30"]},
+    {n:4, prompt:"Three matching windows, each 3 feet wide, are placed side by side with no gaps. How wide is the total?", type:"short", accept:["9"]},
+    {n:5, prompt:"A rectangle's length is 9 inches and its width is 4 inches. What's the difference between length and width?", type:"short", accept:["5"]},
+    {n:6, prompt:"Skip count by 10s starting at 465: 465, 475, ___, ___", type:"short", accept:["485,495"]},
+    {n:7, prompt:"Leah has 6 dimes and 4 pennies. She spends 34 cents on candy. How much does she have left (in cents)?", type:"short", accept:["30"]}
   ]
 }
 ];
@@ -633,7 +540,7 @@ async function renderLanding(){
   app.innerHTML = `
     <span class="eyebrow">Math · Cumulative Exam</span>
     <h1 class="title">Ready when you are</h1>
-    <p class="subtitle">Starts with a foundations check, moves through 8 topic sections, and ends with a mixed challenge round pulling from everything. ${TOTAL_QUESTIONS} questions in total, split into 10 parts you can spread across as many sittings as you want — answers save automatically on this device.</p>
+    <p class="subtitle">Starts with a foundations check, moves through a few focused sections, and ends with a mixed challenge round pulling from everything. ${TOTAL_QUESTIONS} questions in total, split into 6 parts you can spread across as many sittings as you want — answers save automatically on this device.</p>
 
     <div class="card">
       <h3 style="font-size:16px;">Who's taking the exam?</h3>
@@ -835,29 +742,50 @@ function attachQuestionHandler(part,q,locked){
   });
 }
 
-async function finishExam(){
-  clearInterval(state.timerHandle);
-  await submitExam();
-  state.screen = "submitted";
-  render();
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mgawapnl";
+
+function buildReviewerEmailText(){
+  const now = new Date();
+  const graded = gradeAll();
+  const summary = autoScoreSummary();
+  let lines = [];
+  lines.push("MATH FOUNDATIONS EXAM — RESULTS FOR REVIEW");
+  lines.push("Student: " + state.studentName);
+  lines.push("Time taken: " + formatTime(state.elapsed));
+  lines.push("Submitted: " + now.toLocaleString());
+  lines.push("");
+  lines.push("AUTO-GRADED SCORE: " + summary.overallCorrect + "/" + summary.overallAutoTotal
+    + " (" + (summary.overallAutoTotal>0 ? Math.round((summary.overallCorrect/summary.overallAutoTotal)*100) : 0) + "%)");
+  lines.push(summary.overallManualPending + " question(s) below are marked [TO SCORE] and need your judgment.");
+  lines.push("");
+
+  PARTS.forEach(part=>{
+    lines.push("=".repeat(3) + " " + part.title + " " + "=".repeat(3));
+    lines.push("");
+    part.questions.forEach(q=>{
+      const key = qKey(part.id,q.n);
+      const given = state.answers[key];
+      const answerText = (given===undefined || given.toString().trim()==="") ? "(left blank)" : given;
+      const g = graded[key];
+      lines.push(q.n + ". " + q.prompt);
+      lines.push("   Student answered: " + answerText);
+      if(g.type==="auto"){
+        if(g.correct){
+          lines.push("   ✓ CORRECT");
+        } else {
+          const correctAnswer = q.type==="range" ? ("between " + q.range[0] + " and " + q.range[1]) : (q.accept ? q.accept[0] : "");
+          lines.push("   ✗ WRONG — correct answer: " + correctAnswer);
+        }
+      } else {
+        lines.push("   [TO SCORE — expected: " + q.expected + "]");
+      }
+      lines.push("");
+    });
+  });
+  return lines.join("\n");
 }
 
-function renderSubmitted(){
-  app.innerHTML = `
-    <span class="eyebrow">All done</span>
-    <h1 class="title">Nice work, ${escapeHtml(state.studentName)}.</h1>
-    <p class="subtitle">Your exam is saved on this device. To make sure your results definitely reach whoever's grading it, download your answers below and pass the file along (USB, AirDrop, email — whatever's easiest).</p>
-    <div class="card" style="text-align:center;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--ink-soft);">Time taken: ${formatTime(state.elapsed)}</div>
-      <button class="btn btn-primary" id="downloadBtn" style="margin-top:16px;">⬇ Download my answers (readable)</button>
-      <div><button class="btn btn-ghost" id="backToLanding" style="margin-top:12px;">Back to start</button></div>
-    </div>
-  `;
-  document.getElementById("downloadBtn").onclick = downloadAnswers;
-  document.getElementById("backToLanding").onclick = ()=>{ state.screen="landing"; render(); };
-}
-
-function downloadAnswers(){
+function buildAnswersPayload(){
   const now = new Date();
   const graded = gradeAll();
   let lines = [];
@@ -880,7 +808,7 @@ function downloadAnswers(){
     });
   });
 
-  const payload = {
+  const dataPayload = {
     kind:"grade1examanswers",
     studentName: state.studentName,
     answers: state.answers,
@@ -889,10 +817,114 @@ function downloadAnswers(){
     elapsed: state.elapsed,
     submittedAt: Date.now()
   };
-  lines.push("------ DO NOT EDIT BELOW THIS LINE (encoded data, used only for auto-grading import) ------");
-  lines.push(btoa(unescape(encodeURIComponent(JSON.stringify(payload)))));
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(dataPayload))));
 
-  const blob = new Blob([lines.join("\n")], {type:"text/plain"});
+  const readableText = lines.join("\n")
+    + "\n------ DO NOT EDIT BELOW THIS LINE (encoded data, used only for auto-grading import) ------\n"
+    + encoded;
+
+  return { readableText, dataPayload };
+}
+
+async function sendResultsToReviewer(readableText){
+  try{
+    const res = await fetch(FORMSPREE_ENDPOINT, {
+      method:"POST",
+      headers:{ "Content-Type":"application/json", "Accept":"application/json" },
+      body: JSON.stringify({
+        student_name: state.studentName,
+        _subject: "Math exam results — " + state.studentName,
+        message: readableText
+      })
+    });
+    return res.ok;
+  }catch(e){
+    console.error("Formspree send failed", e);
+    return false;
+  }
+}
+
+async function finishExam(){
+  clearInterval(state.timerHandle);
+  await submitExam();
+  const reviewerText = buildReviewerEmailText();
+  state.sendStatus = "sending";
+  state.screen = "submitted";
+  render();
+  const ok = await sendResultsToReviewer(reviewerText);
+  state.sendStatus = ok ? "sent" : "failed";
+  if(state.screen === "submitted") render();
+}
+
+function autoScoreSummary(){
+  const graded = gradeAll();
+  let overallCorrect=0, overallAutoTotal=0, overallManualPending=0;
+  const rows = PARTS.map(part=>{
+    let correct=0, autoTotal=0, manualPending=0;
+    part.questions.forEach(q=>{
+      const g = graded[qKey(part.id,q.n)];
+      if(g.type==="auto"){ autoTotal++; if(g.correct) correct++; }
+      else { manualPending++; }
+    });
+    overallCorrect += correct; overallAutoTotal += autoTotal; overallManualPending += manualPending;
+    const pct = autoTotal>0 ? Math.round((correct/autoTotal)*100) : null;
+    return {title:part.title, correct, autoTotal, manualPending, pct};
+  });
+  return {rows, overallCorrect, overallAutoTotal, overallManualPending};
+}
+
+function renderSubmitted(){
+  const summary = autoScoreSummary();
+  const overallPct = summary.overallAutoTotal>0 ? Math.round((summary.overallCorrect/summary.overallAutoTotal)*100) : 0;
+  const rowsHtml = summary.rows.map(r=>{
+    const pctColor = r.pct===null ? 'var(--ink-soft)' : (r.pct>=70 ? 'var(--green)' : 'var(--coral)');
+    return `<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--paper-line);font-size:14px;">
+      <span>${escapeHtml(r.title)}</span>
+      <span style="font-family:'JetBrains Mono',monospace;color:${pctColor};font-weight:600;">
+        ${r.autoTotal>0 ? r.correct+"/"+r.autoTotal : "—"} ${r.manualPending>0 ? `<span class="manual-tag">${r.manualPending} hand-graded</span>` : ""}
+      </span>
+    </div>`;
+  }).join("");
+
+  let sendStatusHtml;
+  if(state.sendStatus==="sending"){
+    sendStatusHtml = `<div class="notice" style="background:var(--indigo-soft);border-color:#C7CCEA;color:var(--indigo);">Sending your results to be reviewed…</div>`;
+  } else if(state.sendStatus==="sent"){
+    sendStatusHtml = `<div class="notice" style="background:var(--green-soft);border-color:#BFDCC4;color:var(--green);">✓ Your results were sent automatically. You don't need to do anything else — but downloading a copy below never hurts.</div>`;
+  } else if(state.sendStatus==="failed"){
+    sendStatusHtml = `<div class="notice">⚠ Couldn't send automatically (maybe no internet connection). Please download your answers below and pass the file along yourself.</div>`;
+  } else {
+    sendStatusHtml = "";
+  }
+
+  app.innerHTML = `
+    <span class="eyebrow">All done</span>
+    <h1 class="title">Nice work, ${escapeHtml(state.studentName)}.</h1>
+    <p class="subtitle">Here's your score on the questions that grade automatically. ${summary.overallManualPending} question${summary.overallManualPending===1?'':'s'} will be scored by hand by whoever's reviewing your exam — that's normal, not a mistake, so your final result may shift slightly once those are checked.</p>
+    ${sendStatusHtml}
+
+    <div class="card">
+      <div style="text-align:center;margin-bottom:14px;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:32px;font-weight:700;color:var(--indigo);">${summary.overallCorrect}/${summary.overallAutoTotal}</div>
+        <div style="font-size:12.5px;color:var(--ink-soft);">auto-graded correct (${overallPct}%)</div>
+      </div>
+      ${rowsHtml}
+    </div>
+
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--ink-soft);">Time taken: ${formatTime(state.elapsed)}</div>
+      <p style="font-size:13px;color:var(--ink-soft);margin:10px 0 4px 0;">Want a backup copy too? Download your answers as a file.</p>
+      <button class="btn btn-primary" id="downloadBtn" style="margin-top:8px;">⬇ Download my answers (readable)</button>
+      <div><button class="btn btn-ghost" id="backToLanding" style="margin-top:12px;">Back to start</button></div>
+    </div>
+  `;
+  document.getElementById("downloadBtn").onclick = downloadAnswers;
+  document.getElementById("backToLanding").onclick = ()=>{ state.screen="landing"; render(); };
+}
+
+function downloadAnswers(){
+  const { readableText } = buildAnswersPayload();
+  const blob = new Blob([readableText], {type:"text/plain"});
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
